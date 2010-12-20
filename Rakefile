@@ -15,13 +15,14 @@ Jeweler::Tasks.new do |gem|
   gem.name = "wildsonet-streamer"
   gem.homepage = "http://github.com/marekjelen/wildsonet-streamer"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Streaming data to browser}
+  gem.description = %Q{Simple way to stream data from serve to clients browser}
   gem.email = "marek@jelen.biz"
   gem.authors = ["Marek Jelen"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
+  gem.add_runtime_dependency 'wildsonet-netty'
+  gem.add_runtime_dependency 'wildsonet-hazelcast'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
 end
 Jeweler::RubygemsDotOrgTasks.new

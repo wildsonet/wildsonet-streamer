@@ -1,6 +1,77 @@
-= wildsonet-streamer
+= WildSoNet::Streamer
 
-Description goes here.
+Simple way to stream data from server to client's browser.
+
+== Status
+
+* No documentation
+* No tests
+
+Not production ready ... experimental ... proof of concept.
+
+== Browsers
+
+* Mac
+** Safari       OK
+** Chrome       OK
+** Firefox      OK
+** Opera        Not tested
+* Windows
+** IE           Not tested
+** Chrome       Not tested
+** Firefox      Not tested
+** Safari       Not tested
+** Opera
+* Linux
+** Firefox      Not tested
+** Chrome       Not tested
+** Opera
+** Konqueror    Not tested
+* iOS
+** WebKit       Not tested
+** Opera        Not tested
+* Android
+** WebKit       Not tested
+** Opera        Not tested
+
+== Usage
+
+- Start server at specific address and port
+- Configure front-end server to proxy requests to streamer
+- Request stream from your website
+- Push messages from your application using Hazelcast
+
+=== Starting Streamer server
+
+  address = "0.0.0.0"
+  port = 3001
+  WildSoNet::Streamer::Server.start(port, address)
+
+=== Configure nginx for proxying
+
+  location /streamer {
+    proxy_pass http://address:port;
+	chunked_transfer_encoding on;
+	proxy_buffering off;
+  }
+
+=== Embed to your site
+
+  <script type="text/javascript" src="/streamer.js"></script>
+  <script type="text/javascript">
+    Streamer.url = "/streamer" //URL to used to access streams, configured in previous step
+    Streamer.start(client_id) // Starts stream with client ID
+  </script>
+
+=== Push messages from application
+
+When streamer is embedded into application
+
+  WildSoNet::Streamer::Server.push(client_id, message)
+
+or when messages are distributed
+
+  WildSoNet::Hazelcast.queue("streamer").put(Marshal.dump([client_id, message]))
 
 == Contributing to wildsonet-streamer
  
@@ -14,6 +85,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 Marek Jelen. See LICENSE.txt for
-further details.
-
+Copyright (c) 2010 Marek Jelen. See LICENSE.txt for further details.
