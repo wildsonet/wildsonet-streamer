@@ -11,28 +11,32 @@ Not production ready ... experimental ... proof of concept.
 
 == Browsers
 
-* Mac
-** Safari       OK
-** Chrome       OK
-** Firefox      OK
-** Opera        Not tested
-* Windows
-** IE           Not tested
-** Chrome       Not tested
-** Firefox      Not tested
-** Safari       Not tested
-** Opera
-* Linux
-** Firefox      Not tested
-** Chrome       Not tested
-** Opera
-** Konqueror    Not tested
-* iOS
-** WebKit       Not tested
-** Opera        Not tested
-* Android
-** WebKit       Not tested
-** Opera        Not tested
+=== Mac
+* Safari       OK
+* Chrome       OK
+* Firefox      OK
+* Opera        Not tested
+
+=== Windows
+* IE           Not tested
+* Chrome       Not tested
+* Firefox      Not tested
+* Safari       Not tested
+* Opera
+
+=== Linux
+* Firefox      Not tested
+* Chrome       Not tested
+* Opera
+* Konqueror    Not tested
+
+=== iOS
+* WebKit       Not tested
+* Opera        Not tested
+
+=== Android
+* WebKit       Not tested
+* Opera        Not tested
 
 == Usage
 
