@@ -6,7 +6,7 @@ require "wildsonet-streamer-version"
 Gem::Specification.new do |s|
 
   s.name = "wildsonet-streamer"
-  s.version = WildSoNet::Server::VERSION
+  s.version = WildSoNet::Streamer::VERSION
   s.authors = ["Marek Jelen"]
   s.summary = "Stream data to client's browsers"
   s.description = "Simple way to stream data to client's browsers"
@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
     "lib/wildsonet-streamer-version.rb",
     "lib/handler.rb",
     "lib/server.rb",
-    "wildsonet-server.gemspec"
+    "wildsonet-streamer.gemspec"
   ]
 
   s.require_paths = ["lib"]
